@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical Cost Estimator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Medical Cost Estimator 💰</h1>
+        <form action="/predict" method="post">
+            <input type="number" name="age" placeholder="Age" required>
+
+            <label>Sex:</label>
+            <select name="sex">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <input type="number" step="0.1" name="bmi" placeholder="BMI" required>
+            <input type="number" name="children" placeholder="Number of Children" required>
+
+            <label>Smoker:</label>
+            <select name="smoker">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label>Region:</label>
+            <select name="region">
+                <option value="northeast">Northeast</option>
+                <option value="northwest">Northwest</option>
+                <option value="southeast">Southeast</option>
+                <option value="southwest">Southwest</option>
+            </select>
+
+            <button type="submit">Estimate Cost</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Estimated Medical Cost</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>💸 Estimated Medical Cost 💸</h1>
+        <p>Your estimated cost is:</p>
+        <h2>${{ prediction }}</h2>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>
